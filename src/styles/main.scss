@@ -274,16 +274,18 @@ body {
     background-position-x: center;
     background-repeat: no-repeat;
     padding-top: 2rem;
-    padding-bottom: 200px;
+    padding-bottom: 16rem;
     &__text {
         margin-top: 6rem;
         max-width: 700px;
     }
-    &__slider {
-        overflow: hidden;
-        padding-top: 100px;
-    }
 }
+
+.slider {
+    overflow: hidden;
+    padding-top: 100px;
+}
+
 .swiper {
     overflow: initial;
     &-slide {
@@ -295,18 +297,55 @@ body {
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        z-index: 0;
+        &_white {
+            &:hover {
+                .swiper-slide__hover {
+                    height: 233px;
+                    opacity: 1;
+                }
+                &::after {
+                    content: '';
+                    background-color: rgba($white, .55);
+                    width: calc(100% - 4px);
+                    height: calc(100% - 4px);
+                    position: absolute;
+                    top: 2px;
+                    left: 2px;
+                    border-radius: 2rem;
+                    z-index: -1;
+                }
+            }
+        }
         &:hover {
             box-shadow: 0 0 0 2px rgba($green, 0.4) inset;
+        }
+        &_milk {
+            background-image: url(../images/milk.png);
+        }
+        &_pasta {
+            background-image: url(../images/pasta.png);
+        }
+        &_steaks {
+            background-image: url(../images/steaks.png);
         }
         &__title {
             font-family: $font-cormorant;
             font-size: 3rem;
-            margin-bottom: 1rem;
+            margin-bottom: 0;
             color: $green;
+        }
+        &__hover {
+            height: 0;
+            opacity: 0;
         }
         &__text {
             color: rgba($green, 0.7);
             line-height: 150%;
+            margin-top: 2.5rem;
             margin-bottom: 3.4rem;
             max-width: 263px;
         }
@@ -335,6 +374,11 @@ body {
 
 
         }
+        &__footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
     }
     &-pagination {
         display: none;
@@ -358,5 +402,66 @@ body {
     &-button-prev {
         left: initial;
         right: 72px;
+    }
+}
+.about {
+    background-image: url(../images/about.png);
+    background-size: cover;
+    background-position-x: center;
+    background-repeat: no-repeat;
+    padding-bottom: 16rem;
+    &__box {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 6.7rem;
+    }
+    &__text {
+        margin-left: 12rem;
+        flex-basis: 620px;
+    }
+    &__list {
+        font-family: $font-cormorant;
+        font-style: italic;
+        font-size: 3rem;
+        list-style: none;
+        display: flex;
+        gap: 8.5rem;
+        margin: 0;
+        padding-left: 0;
+    }
+    &__item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        &::before {
+            content: '';
+            width: 87px;
+            height: 87px;
+            background-position: center center;
+            background-repeat: no-repeat;
+            border: 1px solid rgba($green, .4);
+            border-radius: 100%;
+            margin-bottom: 1.5rem;
+        }
+        &:nth-child(1) {
+            &::before {
+                background-image: url(../images/about-icon-1.svg);
+                background-size: 43px 41px;
+            }
+        }
+        &:nth-child(2) {
+            &::before {
+                background-image: url(../images/about-icon-2.svg);
+                background-size: 39px 39px;
+            }
+        }
+        &:nth-child(3) {
+            &::before {
+                background-image: url(../images/about-icon-3.svg);
+                background-size: 45px 39px;
+            }
+        }
     }
 }
