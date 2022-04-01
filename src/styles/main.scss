@@ -8,6 +8,20 @@ $white: #fff;
 $font-jost: 'Jost', sans-serif;
 $font-cormorant: 'Cormorant', serif;
 
+$r_minmob: 320px;
+$t_mob_360px: 360px;
+$t_mob_360px: 400px;
+$t_mob_360px: 500px;
+$t_mob_360px: 600px;
+$r_tab: 768px;
+$r_tab_900: 900px;
+$r_desk: 1000px;
+$r_desk_1120: 1120px;
+$r_desk_hd: 1200px;
+$r_desk_1280: 1280px;
+$r_desk_1350: 1350px;
+$r_desk_1750: 1750px;
+
 html {
     font-size: 10px;
 }
@@ -18,7 +32,6 @@ body {
     color: $green;
     background-image: url(../images/background.webp);
     background-size: cover;
-    background-position-x: center;
     background-repeat: no-repeat;
 }
 
@@ -29,10 +42,22 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 8rem;
+    gap: 5%;
+    @media (max-width: $r_desk_1280) {
+        gap: 3%;
+    }
     &__navigation {
         flex-grow: 1;
-        margin-left: 4rem;
+        margin-left: 4.5rem;
+        @media (max-width: $r_desk_1280) {
+            margin-left: 0;
+        }
+        @media (max-width: $r_desk_hd) {
+            flex-grow: 0;
+        }
+        @media (max-width: $r_tab_900) {
+            display: none;
+        }
     }
     &__nav {
         display: flex;
@@ -40,11 +65,14 @@ body {
         margin: 0;
         padding-left: 0;
         gap: 4.8rem;
+        @media (max-width: $r_desk_hd) {
+            gap: 2.5rem;
+        }
     }
     &__link {
         color: $green;
         text-decoration: none;
-        transition: 0.3s;
+        transition: 0.2s;
         &:hover {
             color: $orange;
         }
@@ -56,15 +84,18 @@ body {
         flex-basis: 200px;
         letter-spacing: .13rem;
         text-align: right;
-        transition: 0.3s;
+        transition: 0.2s;
         animation: color 6s ease infinite;
         &:hover {
             color: $orange;
         }
+        @media (max-width: $r_desk_hd) {
+            display: none;
+        }
     }
     &__cart {
         display: block;
-        flex-basis: 4rem;
+        width: 4rem;
         height: 4rem;
         border-radius: 100%;
         background-color: $orange;
@@ -74,12 +105,22 @@ body {
         background-size: 1.7rem 1.5rem;
         position: relative;
         border: 1px solid $orange;
-        transition: 0.3s;
+        transition: 0.2s;
         cursor: pointer;
+        @media (max-width: $r_desk_hd) {
+            background-image: url(../images/cart-mobi.svg);
+            background-color: $white;
+            border: 1px solid $green;
+            opacity: .8;
+        }
         &:hover {
             background-color: $green;
             border: 1px solid $green;
-        }
+            @media (max-width: $r_desk_hd) {
+                background-color: $white;
+                opacity: 1;
+            }
+        } 
     }
     &__counter {
         font-size: .8rem;
@@ -87,6 +128,56 @@ body {
         position: absolute;
         right: .7rem;
         top: .6rem;
+        @media (max-width: $r_desk_hd) {
+            color: $green;
+        }
+    }
+    &__phone, &__menu {
+        display: none;
+    }
+    &__phone {
+        @media (max-width: $r_desk_hd) {
+            display: block;
+            width: 4rem;
+            height: 4rem;
+            border-radius: 100%;
+            background-color: $white;
+            background-image: url(../images/tel.svg);
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: 1.7rem 1.5rem;
+            position: relative;
+            border: 1px solid $green;
+            opacity: .8;
+            transition: 0.2s;
+        }
+        &:hover {
+            opacity: 1;
+        }
+    }
+    &__menu {
+        @media (max-width: $r_tab_900) {
+            display: block;
+            width: 4rem;
+            height: 4rem;
+            border-radius: 100%;
+            background-color: $white;
+            background-image: url(../images/menu.svg);
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: 1.7rem 1.5rem;
+            position: relative;
+            border: 1px solid $green;
+            opacity: .8;
+            transition: 0.2s;
+        }
+    }
+    &__buttons {
+        @media (max-width: $r_desk_hd) {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
     }
 }
 .logo {
@@ -107,6 +198,9 @@ body {
     margin: 0 auto;
     padding-left: 15px;
     padding-right: 15px;
+    @media (max-width: $r_tab) {
+        max-width: 600px;
+    }
 }
 .main {
     position: relative;
@@ -116,15 +210,33 @@ body {
         margin-left: 12.1rem;
         max-width: 378px;
         margin-top: 6.1rem;
+        @media (max-width: $r_desk_1280) {
+            margin-left: 8rem;
+        }
+        @media (max-width: $r_desk_1120) {
+            margin-left: 4rem;
+        }
+        @media (max-width: $r_tab) {
+            max-width: 100%;
+            margin-left: 0;
+            margin-top: 3rem;
+        }
     }
     &__link {
         margin-top: 5.4rem;
+        @media (max-width: $r_tab) {
+            text-align: center;
+        }
     }
     &__flex {
         display: flex;
         justify-content: space-between;
         align-items: center;
         gap: 30px;
+        @media (max-width: $r_desk_1120) {
+            padding-top: 3rem;
+            padding-bottom: 9rem;
+        }
     }
     &__cover {
         flex-basis: 758px;
@@ -136,6 +248,22 @@ body {
         justify-content: center;
         align-items: center;
         position: relative;
+        @media (max-width: $r_desk_1350) {
+            flex-basis: 650px;
+            height: 650px;
+        }
+        @media (max-width: $r_desk_hd) {
+            flex-basis: 600px;
+            height: 600px;
+        }
+        @media (max-width: $r_desk_1120) {
+            border: 1px solid transparent;
+            height: auto;
+            flex-basis: calc(100% - 395px);
+        }
+        @media (max-width: $r_tab) {
+            display: none;
+        }
     }
     &__line {
         width: 656px;
@@ -146,14 +274,43 @@ body {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        @media (max-width: $r_desk_1350) {
+            width: 600px;
+            height: 600px;
+        }
+        @media (max-width: $r_desk_hd) {
+            border: 1px solid transparent;
+            width: auto;
+            height: auto;
+        }
     }
     &__image {
         width: 92%;
         border-radius: 100%;
         animation: shadow 5s linear infinite;
     }
+    &__imagemobi {
+        display: none;
+        @media (max-width: $r_tab) {
+            display: block;
+            max-width: 300px;
+            margin: 0 auto;
+            margin-top: 3rem;
+            border-radius: 100%;
+            animation: shadow 5s linear infinite;
+        }
+    }
     &__text {
         padding-top: 4rem;
+        @media (max-width: $r_desk_1120) {
+            flex-basis: 395px;
+        }
+        @media (max-width: $r_tab) {
+            flex-basis: 100%;
+        }
+        @media (max-width: $r_tab) {
+            padding-top: 0;
+        }
     }
     &__btn {
         background-color: transparent;
@@ -177,22 +334,37 @@ body {
             border-radius: 100%;
             position: absolute;
             cursor: pointer;
-            transition: 0.3s;
+            transition: 0.2s;
         }
         &_1 {
             top: 42px;
             left: 62px;
             line-height: 150%;
+            @media (max-width: $r_desk_hd) {
+                top: 39px;
+                left: 18px;
+            }
+            @media (max-width: $r_desk_1120) {
+                display: none;;
+            }
             &::before {
                 top: 26px;
                 left: 85px;
-
             }
         }
         &_2 {
             top: 190px;
             right: 1px;
             line-height: 150%;
+            @media (max-width: $r_desk_1350) {
+                top: 109px;
+            }
+            @media (max-width: $r_desk_hd) {
+                top: 55px;
+            }
+            @media (max-width: $r_desk_1120) {
+                display: none;;
+            }
             &::before {
                 top: 20px;
                 right: 88px;
@@ -202,6 +374,12 @@ body {
             bottom: -52px;
             right: 242px;
             line-height: 150%;
+            @media (max-width: $r_desk_1350) {
+                bottom: -59px;
+            }
+            @media (max-width: $r_desk_1120) {
+                display: none;;
+            }
             &::before {
                 bottom: 58px;
                 right: 31px;
@@ -227,6 +405,10 @@ body {
         right: 35px;
         width: 18.9rem;
         z-index: -1;
+        @media (max-width: $r_desk_1750) {
+            width: 9.8rem;;
+            top: 120px;
+        }
     }
     &__cucumber {
         position: absolute;
@@ -241,6 +423,9 @@ body {
         left: 90px;
         width: 8.6rem;
         z-index: -1;
+        @media (max-width: $r_desk_1750) {
+            display: none;
+        }
     }
     &__beans {
         position: absolute;
@@ -256,7 +441,16 @@ body {
     font-weight: 700;
     font-size: 8rem;
     margin: 0;
-    line-height: 100%;
+    line-height: 1;
+    @media (max-width: $r_desk_1280) {
+        font-size: 7rem;
+    }
+    @media (max-width: $r_desk_1120) {
+        font-size: 6rem;
+    }
+    @media (max-width: $r_tab) {
+        text-align: center;
+    }
     &__span {
         font-style: italic;
         animation: color 6s ease infinite;
@@ -270,11 +464,20 @@ body {
 .description {
     margin: 0;
     line-height: 1.5;
+    @media (max-width: $r_tab) {
+        text-align: center;
+    }
     &_size-s {
         font-size: 1.8rem;
+        @media (max-width: $r_desk_1280) {
+            font-size: 1.6rem;
+        }
     }
     &_size-m {
         font-size: 2.4rem;
+        @media (max-width: $r_desk_1280) {
+            font-size: 2.2rem;
+        }
     }
 }
 .link {
@@ -289,7 +492,10 @@ body {
     display: inline-block;
     border: none;
     cursor: pointer;
-    transition: .3s;
+    transition: .2s;
+    @media (max-width: $r_desk_1280) {
+        font-size: 1.4rem;
+    }
     &:hover {
         background-color: $dark-orange;
     }
@@ -320,6 +526,12 @@ body {
 .slider {
     overflow: hidden;
     padding-top: 9rem;
+    @media (max-width: $r_tab) {
+        max-width: 450px;
+        margin: 0 auto;
+        padding-top: 5.4rem;
+        padding-bottom: 6rem;
+    }
 }
 
 .swiper {
@@ -337,14 +549,17 @@ body {
         background-size: contain;
         position: relative;
         z-index: 0;
-        transition: 0.3s;
+        transition: 0.2s;
+        @media (max-width: $r_desk_hd) {
+            height: 40rem;
+        }
         &_white {
             justify-content: flex-end;
             &:hover {
                 .swiper-slide__hover {
                     height: 233px;
                     opacity: 1;
-                    transition: 0.3s;
+                    transition: 0.2s;
                 }
                 &::after {
                     content: '';
@@ -415,7 +630,7 @@ body {
             gap: 2rem;
             letter-spacing: 0.1rem;
             opacity: 0.8;
-            transition: 0.3s;
+            transition: 0.2s;
             &:hover {
                 opacity: 1;
             }
@@ -450,10 +665,16 @@ body {
     }
     &-pagination {
         display: none;
+        @media (max-width: $r_tab) {
+            display: block;
+        }
     }
     &-button-next, &-button-prev {
         top: -60px;
-        transition: 0.3s;
+        transition: 0.2s;
+        @media (max-width: $r_tab) {
+            display: none;
+        }
         &:hover {
             &::after{
             color: rgba($green, 1);
@@ -472,7 +693,20 @@ body {
         right: 72px;
     }
 }
-
+.swiper-horizontal>.swiper-pagination-bullets {
+    bottom: -50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.swiper-pagination-bullet-active {
+    background: $orange;
+    border: 1px solid $orange;
+}
+.swiper-pagination-bullet {
+    width: 8px;
+    height: 8px;
+}
 .counter {
     display: flex;
     &__btn {
@@ -525,6 +759,12 @@ body {
     &__text {
         margin-left: 12rem;
         flex-basis: 620px;
+        @media (max-width: $r_desk_1280) {
+            margin-left: 8rem;
+        }
+        @media (max-width: $r_desk_1120) {
+            margin-left: 4rem;
+        }
     }
     &__list {
         font-family: $font-cormorant;
@@ -597,7 +837,7 @@ body {
         color: rgba($green, .5);
         border-radius: 4rem;
         padding: 2.4rem 0;
-        transition: 0.3s;
+        transition: 0.2s;
         &:hover {
             border: 1px solid $orange;
             color: $orange;
@@ -621,7 +861,7 @@ body {
         padding: 0;
         margin: 5.6rem auto 0;
         opacity: 0.8;
-        transition: 0.3s;
+        transition: 0.2s;
         cursor: pointer;
         &:hover {
             opacity: 1;
@@ -647,7 +887,7 @@ body {
         border-radius: 2rem;
         padding: 2.7rem 3rem 3.8rem;
         box-sizing: border-box;
-        transition: 0.3s;
+        transition: 0.2s;
         &:hover {
             box-shadow: 0 0 0 2px rgba($green, .4) inset;
         }
@@ -744,7 +984,7 @@ body {
         background-repeat: no-repeat;
         opacity: .4;
         transform: scale(1);
-        transition: 0.3s;
+        transition: 0.2s;
         height: 32px;
         &:nth-child(1) {
                 background-image: url(../images/mastercard.svg);
@@ -800,7 +1040,7 @@ body {
             text-decoration: none;
             gap: 2.8rem;
             align-items: center;
-            transition: 0.3s;
+            transition: 0.2s;
             &:hover {
                 color: $orange;
             }
@@ -876,7 +1116,7 @@ body {
         color: rgba($green, .6);
         text-decoration: none;
         border-bottom: 1px solid #ecedec;
-        transition: 0.3s;
+        transition: 0.2s;
         &:hover {
             color: rgba($green, 1);
             border-bottom: 1px solid $green;
@@ -906,7 +1146,7 @@ footer {
     &__link {
         text-decoration: none;
         color: $green;
-        transition: 0.3s;
+        transition: 0.2s;
         &:hover {
             color: $orange;
         }
@@ -929,7 +1169,7 @@ footer {
     &__course {
         color: rgba($green, 0.6);
         text-decoration: none;
-        transition: .3s;
+        transition: .2s;
         &:hover {
             color: rgba($green, 1);
         }
@@ -951,7 +1191,7 @@ footer {
         background-repeat: no-repeat;
         background-position: center;
         opacity: 0.8;
-        transition: 0.3s;
+        transition: 0.2s;
         &:hover {
             opacity: 1;
         }
