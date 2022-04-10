@@ -439,6 +439,16 @@
                     <a class="catalog__link" href="#">Овощи и фрукты</a>
                 </li>
             </ul>
+            <div class="category__list catalog-swiper catalogSwiper">
+                <div class="swiper-wrapper">
+                    <a class="swiper-slide catalog-swiper__link" href="">Молочные продукты</a>
+                    <a class="swiper-slide catalog-swiper__link" href="">Бакалея</a>
+                    <a class="swiper-slide catalog-swiper__link" href="">Мясо, птица</a>
+                    <a class="swiper-slide catalog-swiper__link" href="">Детям</a>
+                    <a class="swiper-slide catalog-swiper__link" href="">Овощи и фрукты</a>
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
             <div class="catalog-grid">
                 <div class="catalog-grid__item">
                     <div class="catalog-grid__cover">
@@ -620,96 +630,93 @@
             </div>
         </div>
     </section>
-    <div class="footer">
-        <section class="contact">
-            <div class="container">
-                <div class="contact-box">
-                    <div class="contact-box__item">
-                        <h1 class="title title_block">
-                            Не смогли
-                            <span class="title__span">определиться?</span>
-                        </h1>
-                        <div class="contact-box__text">
-                            <p class="contact-box__description">
-                                Если у вас остались вопросы, вы можете задать отправить нам ваши данные. Наши менеджеры свяжутся с вами в течении рабочего дня.
-                            </p>
-                            <ul class="contact-box__list">
-                                <li class="contact-box__item">
-                                    <a class="contact-box__link contact-box__tel" href="tel:+79453425555">+7 945 342 55 55</a>
-                                </li>
-                                <li class="contact-box__item">
-                                    <a class="contact-box__link contact-box__mail" href="mailto:+79453425555">healthlyfood@mail.ru</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="contact-box__form">
-                        <div class="card">
-                            <h3 class="card__title">Свяжитесь с нами</h3>
-                            <form>
-                                <label class="card__label">Ваше имя</label>
-                                <input class="card__input" type="text" placeholder="Ваше имя">
-                                <label class="card__label">Ваш телефон</label>
-                                <input class="card__input" type="tel" placeholder="Ваш телефон">
-                                <button type="submit" class="link card__link">заказать звонок</button>
-                                <p class="card__check">Нажимая на кнопку вы подтверждаете свое согласие на обработку <a href="" class="card__docs">персональных данных</a>.</p>
-                            </form>
-                        </div>
-                    </div>  
-                </div>
-            </div>
-        </section>
-        <footer>
-            <div class="container">
-                <div class="footer-box">
-                    <a href="#" class="logo logo_footer"></a>
-                    <div class="footer__info">
-                        <ul class="footer__list">
-                            <li class="footer__item">
-                                <a href="#" class="footer__link">Наша продукция</a>
+    <section class="contact">
+        <div class="container">
+            <div class="contact-box">
+                <div class="contact-box__item">
+                    <h1 class="title title_block">
+                        Не смогли
+                        <span class="title__span">определиться?</span>
+                    </h1>
+                    <div class="contact-box__text">
+                        <p class="contact-box__description">
+                            Если у вас остались вопросы, вы можете задать отправить нам ваши данные. Наши менеджеры свяжутся с вами в течении рабочего дня.
+                        </p>
+                        <ul class="contact-box__list">
+                            <li class="contact-box__item">
+                                <a class="contact-box__link contact-box__tel" href="tel:+79453425555">+7 945 342 55 55</a>
                             </li>
-                            <li class="footer__item">
-                                <a href="#" class="footer__link">Новинки</a>
-                            </li>
-                            <li class="footer__item">
-                                <a href="#" class="footer__link">Доставка</a>
+                            <li class="contact-box__item">
+                                <a class="contact-box__link contact-box__mail" href="mailto:+79453425555">healthlyfood@mail.ru</a>
                             </li>
                         </ul>
-                        <ul class="footer__list">
-                            <li class="footer__item">
-                                Москва , ул.&nbsp;Ленинградская&nbsp;64
-                            </li>
-                            <li class="footer__item">
-                                пн-пт с&nbsp;09:00 до&nbsp;21:00
-                            </li>
-                            <li class="footer__item">
-                                сб-вс с&nbsp;09:00 до&nbsp;19:00
-                            </li>
-                        </ul>
-                        <div class="footer__contact">
-                            <a href="tel:+79453425555" class="footer__link footer__tel">+7 945 342 55 55</a>
-                            <a href="mailto:healthlyfood@mail.ru" class="footer__link">e-mail: healthlyfood@mail.ru</a>
-                            <ul class="footer-social">
-                                <li class="footer-social__item">
-                                    <a href="#" target="_blank" class="footer-social__link footer-social__vk"></a>
-                                </li>
-                                <li class="footer-social__item">
-                                    <a href="#" target="_blank" class="footer-social__link footer-social__inst"></a>
-                                </li>
-                                <li class="footer-social__item">
-                                    <a href="#" target="_blank" class="footer-social__link footer-social__fb"></a>
-                                </li>
-                            </ul>
-                        </div>
                     </div>
                 </div>
-                <div class="footer__text">
-                    <p class="footer__copy">&copy; 2020, Все права защищены</p>
-                    <p class="footer__author">Сделано в рамках курса учебной платформы <a href="#" class="footer__course">Frontend Blok</a></p>
+                <div class="contact-box__form">
+                    <div class="card">
+                        <h3 class="card__title">Свяжитесь с нами</h3>
+                        <form>
+                            <label class="card__label">Ваше имя</label>
+                            <input class="card__input" type="text" placeholder="Ваше имя">
+                            <label class="card__label">Ваш телефон</label>
+                            <input class="card__input" type="tel" placeholder="Ваш телефон">
+                            <button type="submit" class="link card__link">заказать звонок</button>
+                            <p class="card__check">Нажимая на кнопку вы подтверждаете свое согласие на обработку <a href="" class="card__docs">персональных данных</a>.</p>
+                        </form>
+                    </div>
+                </div>  
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <div class="footer-box">
+                <a href="#" class="logo logo_footer"></a>
+                <div class="footer__info">
+                    <ul class="footer__list">
+                        <li class="footer__item">
+                            <a href="#" class="footer__link">Наша продукция</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#" class="footer__link">Новинки</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#" class="footer__link">Доставка</a>
+                        </li>
+                    </ul>
+                    <ul class="footer__list">
+                        <li class="footer__item">
+                            Москва , ул.&nbsp;Ленинградская&nbsp;64
+                        </li>
+                        <li class="footer__item">
+                            пн-пт с&nbsp;09:00 до&nbsp;21:00
+                        </li>
+                        <li class="footer__item">
+                            сб-вс с&nbsp;09:00 до&nbsp;19:00
+                        </li>
+                    </ul>
+                    <div class="footer__contact">
+                        <a href="tel:+79453425555" class="footer__link footer__tel">+7 945 342 55 55</a>
+                        <a href="mailto:healthlyfood@mail.ru" class="footer__link">e-mail: healthlyfood@mail.ru</a>
+                        <ul class="footer-social">
+                            <li class="footer-social__item">
+                                <a href="#" target="_blank" class="footer-social__link footer-social__vk"></a>
+                            </li>
+                            <li class="footer-social__item">
+                                <a href="#" target="_blank" class="footer-social__link footer-social__inst"></a>
+                            </li>
+                            <li class="footer-social__item">
+                                <a href="#" target="_blank" class="footer-social__link footer-social__fb"></a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-        </footer>
-    </div>
-    
+            <div class="footer__text">
+                <p class="footer__copy">&copy; 2020, Все права защищены</p>
+                <p class="footer__author">Сделано в рамках курса учебной платформы <a href="#" class="footer__course">Frontend Blok</a></p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
