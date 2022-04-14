@@ -1091,10 +1091,10 @@ body {
     padding: 19rem 0 14rem;
     @media (max-width: $r_tab) {
         padding: 8rem 0;
+        overflow-x: hidden;
     }
     @media (max-width: $r_mob_360px) {
         padding: 4.7rem 0 7rem;
-        overflow-x: hidden;
     }
     &__text {
         margin: 4rem 0 8.3rem;
