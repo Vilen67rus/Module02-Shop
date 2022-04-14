@@ -251,6 +251,7 @@ body {
     position: relative;
     padding-bottom: 18.7rem;
     z-index: 0;
+    overflow-x: hidden;
     @media (max-width: $r_tab) {
         padding-bottom: 3rem;
     }
@@ -1093,6 +1094,7 @@ body {
     }
     @media (max-width: $r_mob_360px) {
         padding: 4.7rem 0 7rem;
+        overflow-x: hidden;
     }
     &__text {
         margin: 4rem 0 8.3rem;
@@ -1192,7 +1194,6 @@ body {
     @media (max-width: $r_mob_500px) {
         display: block;
         text-align: center;
-        overflow-x: hidden;
     }
     &__link {
         height: auto;
