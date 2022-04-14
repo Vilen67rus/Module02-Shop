@@ -1192,6 +1192,7 @@ body {
     @media (max-width: $r_mob_500px) {
         display: block;
         text-align: center;
+        overflow-x: hidden;
     }
     &__link {
         height: auto;
